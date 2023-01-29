@@ -1,15 +1,19 @@
-import "./App.css";
 import Header from "./components/Header";
-import TaskForm from "./components/TaskForm";
-import TaskList from "./components/TaskList";
+import TaskSheet from "./components/TaskSheet";
+
+import styled from "styled-components";
+const StyledApp = styled.div`
+  display: grid;
+  grid-template-rows: 100px auto;
+  justify-content: center;
+`;
 
 function App() {
   return (
-    <div className="App">
+    <StyledApp>
       <Header />
-      <TaskForm />
-      <TaskList />
-    </div>
+      <TaskSheet />
+    </StyledApp>
   );
 }
 
