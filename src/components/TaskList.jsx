@@ -1,7 +1,9 @@
-import styled from "styled-components";
+import { useContext } from "react";
+import { TasksContext } from "../context/taskContext";
 
+import styled from "styled-components";
 const StyledLI = styled.li`
-  border-bottom: 1px solid grey;
+  border-bottom: 1px solid #d5e1b7;
   padding: 20px;
   &:last-child {
     border-bottom: none;
@@ -14,12 +16,13 @@ const StyledUL = styled.ul`
   margin: 0;
 `;
 
-const TaskList = (props) => {
-  const { data } = props;
+const TaskList = () => {
+  const tasks = useContext(TasksContext);
   return (
     <div>
       <StyledUL>
-        {data && data.map((row) => <StyledLI>{row.name}</StyledLI>)}
+        {tasks &&
+          tasks.map((row) => <StyledLI key={row.id}>{row.name}</StyledLI>)}
       </StyledUL>
     </div>
   );

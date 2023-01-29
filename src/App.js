@@ -1,5 +1,6 @@
 import Header from "./components/Header";
 import TaskSheet from "./components/TaskSheet";
+import { TaskProvider } from "./context/taskContext";
 
 import styled from "styled-components";
 const StyledApp = styled.div`
@@ -10,10 +11,12 @@ const StyledApp = styled.div`
 
 function App() {
   return (
-    <StyledApp>
-      <Header />
-      <TaskSheet />
-    </StyledApp>
+    <TaskProvider>
+      <StyledApp>
+        <Header />
+        <TaskSheet />
+      </StyledApp>
+    </TaskProvider>
   );
 }
 
