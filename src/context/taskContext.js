@@ -42,7 +42,7 @@ const initialTasks = [
   {
     id: 1,
     name: "one",
-    done: true,
+    done: false,
   },
   {
     id: 2,

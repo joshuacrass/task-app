@@ -14,7 +14,8 @@ const TaskList = () => {
   const tasks = useContext(TasksContext);
   return (
     <StyledUL>
-      {tasks && tasks.map((t) => <Task key={t.id} name={t.name} />)}
+      {tasks &&
+        tasks.map((t) => <Task key={t.id} name={t.name} done={t.done} />)}
     </StyledUL>
   );
 };
