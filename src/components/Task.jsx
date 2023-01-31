@@ -1,9 +1,9 @@
-import { type } from "@testing-library/user-event/dist/type";
 import { useContext } from "react";
-import styled from "styled-components";
 import { TasksDispatchContext } from "../context/taskContext";
+
 import Button from "./Button";
 
+import styled from "styled-components";
 const StyledLI = styled.li`
   display: grid;
   grid-template-columns: 2fr 4fr 2fr;

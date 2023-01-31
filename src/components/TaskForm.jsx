@@ -1,10 +1,10 @@
-import styled from "styled-components";
 import Input from "./Input";
 import Button from "./Button";
-import { useState, useContext } from "react";
 
+import { useState, useContext } from "react";
 import { TasksDispatchContext } from "../context/taskContext";
 
+import styled from "styled-components";
 const StyledTaskForm = styled.div`
   display: flex;
   justify-content: center;

@@ -34,6 +34,7 @@ function taskReducer(tasks, action) {
       console.log("removed");
       return [...tasks.filter((t) => t.id !== action.id)];
     }
+
     default:
       break;
   }
