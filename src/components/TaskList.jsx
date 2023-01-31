@@ -15,7 +15,9 @@ const TaskList = () => {
   return (
     <StyledUL>
       {tasks &&
-        tasks.map((t) => <Task key={t.id} name={t.name} done={t.done} />)}
+        tasks.map((t) => (
+          <Task id={t.id} key={t.id} name={t.name} done={t.done} />
+        ))}
     </StyledUL>
   );
 };

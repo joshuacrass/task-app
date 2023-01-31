@@ -16,37 +16,27 @@ export function TaskProvider({ children }) {
 }
 
 function taskReducer(tasks, action) {
-  switch (action) {
+  switch (action.type) {
     case "add": {
-      return null;
+      // TODO generate next id
+      return [
+        ...tasks,
+        { id: tasks.length + 1, name: action.name, done: false },
+      ];
     }
 
     case "update": {
-      return null;
+      console.log("Updated:", action.id);
+      return [...tasks];
     }
 
     case "remove": {
-      return null;
+      console.log("removed");
+      return [...tasks.filter((t) => t.id !== action.id)];
     }
     default:
       break;
   }
 }
 
-const initialTasks = [
-  {
-    id: 0,
-    name: "zero",
-    done: true,
-  },
-  {
-    id: 1,
-    name: "one",
-    done: false,
-  },
-  {
-    id: 2,
-    name: "two",
-    done: true,
-  },
-];
+const initialTasks = [];
