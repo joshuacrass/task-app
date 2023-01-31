@@ -7,8 +7,9 @@ import { TasksDispatchContext } from "../context/taskContext";
 import styled from "styled-components";
 const StyledTaskForm = styled.div`
   display: flex;
-  justify-content: center;
-  padding: 20px;
+  justify-content: space-around;
+  align-items: center;
+  height: 80px;
   border-bottom: 1px solid grey;
 `;
 
